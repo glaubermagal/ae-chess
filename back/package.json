@@ -1,0 +1,27 @@
+{
+  "name": "ae_chess",
+  "version": "1.0.0",
+  "description": "AE Chess Test",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "generate_test_cases": "node src/generate_test_cases.js",
+    "test": "./node_modules/.bin/mocha --compilers js:@babel/register --exit"
+  },
+  "author": "Glauber Magalhães",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/register": "^7.0.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "eslint": "^5.12.0",
+    "mocha": "^5.2.0"
+  }
+}
