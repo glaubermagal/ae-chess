@@ -1,6 +1,6 @@
 import express from 'express'
-import allPossibleMoves from './all_possible_moves'
 const app = new express()
+import allPossibleMoves from './all_possible_moves'
 const numberTurns = 2
 
 
@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
     res.send( possibleMovesNextTurns )
 });
 
-app.listen(3000, () => {
+app.listen(8080, () => {
     console.log( 'Server Running!' )
 });
 

@@ -2,4 +2,4 @@ require( '@babel/register' ) ({
     presets: [ '@babel/env' ]
 });
 
-module.exports = require( './server.js' );
+module.exports = require( './src/server.js' );

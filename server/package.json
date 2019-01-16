@@ -2,9 +2,9 @@
   "name": "ae_chess",
   "version": "1.0.0",
   "description": "AE Chess Test",
-  "main": "src/app.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node src/app.js",
+    "start": "node app.js",
     "generate_test_cases": "node src/generate_test_cases.js",
     "test": "./node_modules/.bin/mocha --compilers js:@babel/register --exit"
   },
@@ -22,6 +22,7 @@
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
     "eslint": "^5.12.0",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9"
   }
 }
