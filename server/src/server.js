@@ -2,6 +2,8 @@ import express from 'express'
 import allPossibleMoves from './all_possible_moves'
 import headers from './headers'
 const app = new express();
+const PORT = process.env.PORT || 8080;
+const HOST = '0.0.0.0';
 const numberTurns = 2;
 
 app.use(headers);
@@ -33,8 +35,7 @@ app.get('/', (req, res) => {
     res.send( possibleMovesNextTurns )
 });
 
-app.listen(8080, () => {
-    console.log( 'Server Running!' )
-});
+app.listen(PORT, HOST);
+console.log(`Running on http://${HOST}:${PORT}`);
 
 export default app;
