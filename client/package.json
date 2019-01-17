@@ -12,7 +12,7 @@
   "scripts": {
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm-run-all build-css build-js",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest",
     "eject": "react-scripts eject",
     "build-css": "node-sass --include-path ./src  --include-path ./node_modules src/ -o src/compiled",
     "watch-css": "npm run build-css && node-sass --include-path ./src --include-path ./node_modules src/ -o src/compiled/ --watch",
@@ -32,6 +32,9 @@
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "@babel/register": "^7.0.0",
-    "classnames": "^2.2.6"
+    "classnames": "^2.2.6",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
+    "puppeteer": "^1.11.0"
   }
 }

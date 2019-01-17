@@ -18,8 +18,8 @@ function Cell(props) {
 class Board extends Component {
     constructor(props) {
         super(props);
-        this.cols = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H' ]
-        this.rows = [ 1, 2, 3, 4, 5, 6, 7, 8 ]
+        this.cols = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H' ];
+        this.rows = [ 8, 7, 6, 5, 4, 3, 2, 1 ];
     }
 
     renderCol(col, row) {
@@ -88,7 +88,8 @@ class Game extends Component {
     movePiece(coordinate, possible_moves) {
         if (this.state.selected) {
             const diff_x = coordinate[0].charCodeAt(0) - this.state.selected[0].charCodeAt(0);
-            const diff_y = coordinate[1] - this.state.selected[1];
+            const diff_y = this.state.selected[1] - coordinate[1];
+
             let movingClass = '';
 
             if (diff_x === 1 && diff_y === -2) {
